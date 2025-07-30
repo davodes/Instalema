@@ -1,0 +1,221 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Sobre Nosotros - Instalema | Más de 15 años de experiencia";
+const description = "Conoce a Instalema, empresa líder en servicios técnicos con más de 15 años de experiencia. Profesionales certificados, calidad garantizada y compromiso total.";
+---
+
+<Layout title={title} description={description}>
+  <Header />
+  
+  <main class="pt-20">
+    <!-- Hero Section -->
+    <section class="section-padding bg-gradient-to-br from-dark-300 to-dark-200 text-white">
+      <div class="container-max">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">
+              Sobre Instalema
+            </h1>
+            <p class="text-xl text-gray-300 mb-8">
+              Más de 15 años ofreciendo servicios técnicos de máxima calidad. 
+              Somos tu empresa de confianza para instalaciones y mantenimiento.
+            </p>
+            <div class="grid grid-cols-2 gap-6">
+              <div class="text-center">
+                <div class="text-3xl font-bold text-primary-500">+500</div>
+                <div class="text-sm text-gray-400">Proyectos realizados</div>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-primary-500">15+</div>
+                <div class="text-sm text-gray-400">Años de experiencia</div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img 
+              src="https://images.pexels.com/photos/5691630/pexels-photo-5691630.jpeg?auto=compress&cs=tinysrgb&w=800" 
+              alt="Equipo de profesionales de Instalema"
+              class="rounded-2xl shadow-2xl"
+              loading="lazy"
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="section-padding">
+      <div class="container-max">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div class="bg-white p-8 rounded-2xl shadow-lg">
+            <div class="w-16 h-16 bg-primary-500 rounded-lg flex items-center justify-center mb-6">
+              <svg class="w-8 h-8 text-dark-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <h2 class="text-2xl font-bold text-dark-300 mb-4">Nuestra Misión</h2>
+            <p class="text-dark-100">
+              Proporcionar servicios técnicos de la más alta calidad, garantizando la satisfacción 
+              de nuestros clientes a través de soluciones innovadoras, profesionales certificados 
+              y un compromiso inquebrantable con la excelencia.
+            </p>
+          </div>
+          
+          <div class="bg-white p-8 rounded-2xl shadow-lg">
+            <div class="w-16 h-16 bg-primary-500 rounded-lg flex items-center justify-center mb-6">
+              <svg class="w-8 h-8 text-dark-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+              </svg>
+            </div>
+            <h2 class="text-2xl font-bold text-dark-300 mb-4">Nuestra Visión</h2>
+            <p class="text-dark-100">
+              Ser la empresa de referencia en servicios técnicos especializados, reconocida por 
+              nuestra innovación, responsabilidad y compromiso con el desarrollo sostenible y 
+              la satisfacción total de nuestros clientes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="section-padding bg-gray-50">
+      <div class="container-max">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-dark-300 mb-4">
+            Nuestros Valores
+          </h2>
+          <p class="text-xl text-dark-100 max-w-2xl mx-auto">
+            Los principios que guían nuestro trabajo diario y nos distinguen en el mercado
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div class="w-20 h-20 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-10 h-10 text-dark-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-dark-300 mb-2">Calidad</h3>
+            <p class="text-dark-100">
+              Compromiso total con la excelencia en cada proyecto que realizamos.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-20 h-20 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-10 h-10 text-dark-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-dark-300 mb-2">Confianza</h3>
+            <p class="text-dark-100">
+              Transparencia y honestidad en todas nuestras relaciones comerciales.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-20 h-20 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-10 h-10 text-dark-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-dark-300 mb-2">Eficiencia</h3>
+            <p class="text-dark-100">
+              Soluciones rápidas y efectivas que optimizan tiempo y recursos.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-20 h-20 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-10 h-10 text-dark-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-dark-300 mb-2">Compromiso</h3>
+            <p class="text-dark-100">
+              Dedicación completa a la satisfacción y éxito de nuestros clientes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="section-padding">
+      <div class="container-max">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-dark-300 mb-4">
+            Nuestro Equipo
+          </h2>
+          <p class="text-xl text-dark-100 max-w-2xl mx-auto">
+            Profesionales certificados con amplia experiencia en cada especialidad
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="text-center">
+            <img 
+              src="https://images.pexels.com/photos/5691504/pexels-photo-5691504.jpeg?auto=compress&cs=tinysrgb&w=300" 
+              alt="Electricista profesional"
+              class="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+              loading="lazy"
+            >
+            <h3 class="text-xl font-bold text-dark-300 mb-2">Electricistas Certificados</h3>
+            <p class="text-dark-100">
+              Especialistas en instalaciones eléctricas residenciales, comerciales e industriales.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <img 
+              src="https://images.pexels.com/photos/8486944/pexels-photo-8486944.jpeg?auto=compress&cs=tinysrgb&w=300" 
+              alt="Fontanero profesional"
+              class="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+              loading="lazy"
+            >
+            <h3 class="text-xl font-bold text-dark-300 mb-2">Fontaneros Expertos</h3>
+            <p class="text-dark-100">
+              Profesionales con experiencia en todo tipo de instalaciones de fontanería.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <img 
+              src="https://images.pexels.com/photos/5691630/pexels-photo-5691630.jpeg?auto=compress&cs=tinysrgb&w=300" 
+              alt="Técnico de mantenimiento"
+              class="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+              loading="lazy"
+            >
+            <h3 class="text-xl font-bold text-dark-300 mb-2">Técnicos de Mantenimiento</h3>
+            <p class="text-dark-100">
+              Especialistas en mantenimiento preventivo y correctivo de equipos industriales.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-padding bg-primary-500">
+      <div class="container-max text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-dark-400 mb-6">
+          ¿Quieres trabajar con nosotros?
+        </h2>
+        <p class="text-xl text-dark-300 mb-8 max-w-2xl mx-auto">
+          Descubre por qué más de 500 clientes confían en nuestros servicios profesionales.
+        </p>
+        <a href="/contacto" class="bg-dark-400 hover:bg-dark-300 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300">
+          Contactar ahora
+        </a>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>

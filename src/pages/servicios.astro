@@ -1,0 +1,193 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Servicios - Instalema | Instalaciones y Mantenimiento Profesional";
+const description = "Servicios completos de instalaciones eléctricas, fontanería, gas, climatización y mantenimiento técnico. Profesionales certificados con garantía de calidad.";
+
+const services = [
+  {
+    id: 'electricidad',
+    icon: '⚡',
+    title: 'Instalaciones Eléctricas',
+    description: 'Servicios completos de electricidad residencial, comercial e industrial con certificación oficial.',
+    features: [
+      'Instalación de cuadros eléctricos',
+      'Sistemas de iluminación LED',
+      'Instalaciones domóticas',
+      'Certificaciones eléctricas',
+      'Reparación de averías',
+      'Mejoras de eficiencia energética'
+    ],
+    image: 'https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=800'
+  },
+  {
+    id: 'fontaneria',
+    icon: '🚿',
+    title: 'Fontanería',
+    description: 'Soluciones integrales en fontanería, desde reparaciones urgentes hasta instalaciones completas.',
+    features: [
+      'Reparación de tuberías y fugas',
+      'Instalación de sanitarios',
+      'Sistemas de agua caliente',
+      'Detección de fugas con tecnología',
+      'Mantenimiento preventivo',
+      'Servicio de urgencias 24h'
+    ],
+    image: 'https://images.pexels.com/photos/8486944/pexels-photo-8486944.jpeg?auto=compress&cs=tinysrgb&w=800'
+  },
+  {
+    id: 'gas',
+    icon: '🔥',
+    title: 'Instalaciones de Gas',
+    description: 'Instalación y mantenimiento de sistemas de gas natural y GLP con total seguridad.',
+    features: [
+      'Instalaciones de gas natural',
+      'Sistemas de gas butano/propano',
+      'Certificaciones oficiales',
+      'Revisiones anuales obligatorias',
+      'Reparación de averías',
+      'Conversión de instalaciones'
+    ],
+    image: 'https://images.pexels.com/photos/4250268/pexels-photo-4250268.jpeg?auto=compress&cs=tinysrgb&w=800'
+  },
+  {
+    id: 'climatizacion',
+    icon: '❄️',
+    title: 'Climatización',
+    description: 'Sistemas de calefacción y refrigeración eficientes para máximo confort.',
+    features: [
+      'Aire acondicionado residencial',
+      'Sistemas de calefacción',
+      'Aerotermia y bomba de calor',
+      'Suelo radiante',
+      'Mantenimiento de equipos',
+      'Mejoras de eficiencia energética'
+    ],
+    image: 'https://images.pexels.com/photos/5425259/pexels-photo-5425259.jpeg?auto=compress&cs=tinysrgb&w=800'
+  },
+  {
+    id: 'mantenimiento',
+    icon: '🔧',
+    title: 'Mantenimiento Técnico',
+    description: 'Mantenimiento preventivo y correctivo de equipos e instalaciones industriales.',
+    features: [
+      'Mantenimiento preventivo planificado',
+      'Reparaciones de urgencia',
+      'Inspecciones técnicas reglamentarias',
+      'Informes detallados de estado',
+      'Optimización de equipos',
+      'Contratos de mantenimiento'
+    ],
+    image: 'https://images.pexels.com/photos/5691630/pexels-photo-5691630.jpeg?auto=compress&cs=tinysrgb&w=800'
+  },
+  {
+    id: 'reformas',
+    icon: '🏠',
+    title: 'Reformas Integrales',
+    description: 'Renovación completa de espacios con coordinación de todos los gremios necesarios.',
+    features: [
+      'Diseño personalizado de espacios',
+      'Coordinación de gremios',
+      'Gestión de licencias y permisos',
+      'Reformas llave en mano',
+      'Seguimiento de obra',
+      'Garantía integral del proyecto'
+    ],
+    image: 'https://images.pexels.com/photos/8293726/pexels-photo-8293726.jpeg?auto=compress&cs=tinysrgb&w=800'
+  }
+];
+---
+
+<Layout title={title} description={description}>
+  <Header />
+  
+  <main class="pt-20">
+    <!-- Hero Section -->
+    <section class="section-padding bg-gradient-to-br from-dark-300 to-dark-200 text-white">
+      <div class="container-max text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">
+          Nuestros Servicios
+        </h1>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Ofrecemos soluciones técnicas completas con la máxima calidad y profesionalidad. 
+          Más de 15 años de experiencia nos avalan.
+        </p>
+      </div>
+    </section>
+
+    <!-- Services Detail -->
+    <section class="section-padding">
+      <div class="container-max">
+        <div class="space-y-24">
+          {services.map((service, index) => (
+            <div 
+              id={service.id}
+              class={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
+                index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
+              }`}
+            >
+              <div class={index % 2 === 1 ? 'lg:col-start-2' : ''}>
+                <div class="text-6xl mb-6">{service.icon}</div>
+                <h2 class="text-3xl font-bold text-dark-300 mb-4">
+                  {service.title}
+                </h2>
+                <p class="text-lg text-dark-100 mb-8">
+                  {service.description}
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                  {service.features.map(feature => (
+                    <div class="flex items-center space-x-3">
+                      <svg class="w-5 h-5 text-primary-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                      </svg>
+                      <span class="text-dark-200">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+                
+                <a href="/contacto" class="btn-primary">
+                  Solicitar presupuesto
+                </a>
+              </div>
+              
+              <div class={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
+                <img 
+                  src={service.image} 
+                  alt={service.title}
+                  class="rounded-2xl shadow-2xl w-full h-96 object-cover"
+                  loading="lazy"
+                >
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-padding bg-primary-500">
+      <div class="container-max text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-dark-400 mb-6">
+          ¿Necesitas alguno de nuestros servicios?
+        </h2>
+        <p class="text-xl text-dark-300 mb-8 max-w-2xl mx-auto">
+          Contacta con nosotros para recibir un presupuesto personalizado sin compromiso. 
+          Atención profesional garantizada.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contacto" class="bg-dark-400 hover:bg-dark-300 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300">
+            Solicitar presupuesto
+          </a>
+          <a href="tel:+34123456789" class="btn-secondary border-dark-400 text-dark-400 hover:bg-dark-400 hover:text-white">
+            Llamar ahora
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>

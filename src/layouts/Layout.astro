@@ -1,0 +1,102 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import "../styles/global.css";
+
+export interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  type?: string;
+}
+
+const { 
+  title, 
+  description = "Instalema - Servicios profesionales de instalaciones eléctricas, fontanería, gas, climatización y mantenimiento técnico. Calidad garantizada.",
+  image = "/og-image.jpg",
+  type = "website"
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const socialImageURL = new URL(image, Astro.url);
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- SEO Meta Tags -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={socialImageURL} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={socialImageURL} />
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-600.woff2" as="font" type="font/woff2" crossorigin />
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Instalema",
+        "description": "Empresa de instalaciones y mantenimiento técnico",
+        "url": "https://instalema.vercel.app",
+        "telephone": "+34 123 456 789",
+        "email": "info@instalema.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Calle Principal, 123",
+          "addressLocality": "Madrid",
+          "postalCode": "28001",
+          "addressCountry": "ES"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 40.4168,
+          "longitude": -3.7038
+        },
+        "openingHours": "Mo-Fr 08:00-18:00",
+        "priceRange": "€€",
+        "areaServed": {
+          "@type": "City",
+          "name": "Barcelona"
+        },
+        "serviceType": [
+          "Instalaciones eléctricas",
+          "Fontanería",
+          "Instalaciones de gas",
+          "Climatización",
+          "Mantenimiento técnico"
+        ]
+      }
+    </script>
+
+    <ViewTransitions />
+  </head>
+  <body class="bg-white">
+    <slot />
+    <style>
+      html {
+        font-family: 'Inter', system-ui, sans-serif;
+      }
+    </style>
+  </body>
+</html>

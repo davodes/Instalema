@@ -1,0 +1,101 @@
+---
+const services = [
+  {
+    icon: '⚡',
+    title: 'Instalaciones Eléctricas',
+    description: 'Instalación y reparación de sistemas eléctricos residenciales y comerciales con total garantía.',
+    features: ['Cuadros eléctricos', 'Iluminación LED', 'Domótica', 'Certificaciones']
+  },
+  {
+    icon: '🔧',
+    title: 'Mantenimiento Técnico',
+    description: 'Mantenimiento preventivo y correctivo de equipos e instalaciones industriales.',
+    features: ['Mantenimiento preventivo', 'Reparaciones urgentes', 'Inspecciones técnicas', 'Informes detallados']
+  },
+  {
+    icon: '🚿',
+    title: 'Fontanería',
+    description: 'Servicios completos de fontanería, desde reparaciones hasta instalaciones nuevas.',
+    features: ['Reparación tuberías', 'Instalación sanitarios', 'Detección fugas', 'Urgencias 24h']
+  },
+  {
+    icon: '🔥',
+    title: 'Instalaciones de Gas',
+    description: 'Instalación y mantenimiento de sistemas de gas con certificación oficial.',
+    features: ['Gas natural', 'Gas butano/propano', 'Certificaciones', 'Revisiones anuales']
+  },
+  {
+    icon: '❄️',
+    title: 'Climatización',
+    description: 'Sistemas de calefacción y refrigeración eficientes para tu comodidad.',
+    features: ['Aire acondicionado', 'Calefacción', 'Aerotermia', 'Eficiencia energética']
+  },
+  {
+    icon: '🏠',
+    title: 'Reformas Integrales',
+    description: 'Renovación completa de espacios con coordinación de todos los gremios.',
+    features: ['Diseño personalizado', 'Coordinación obras', 'Licencias', 'Llave en mano']
+  }
+];
+---
+
+<section class="section-padding bg-gray-50" id="servicios">
+  <div class="container-max">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-dark-300 mb-4">
+        Nuestros Servicios
+      </h2>
+      <p class="text-xl text-dark-100 max-w-2xl mx-auto">
+        Ofrecemos soluciones técnicas integrales con la máxima calidad y profesionalidad
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {services.map((service, index) => (
+        <div 
+          class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-2"
+          style={`animation-delay: ${index * 0.1}s`}
+        >
+          <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">
+            {service.icon}
+          </div>
+          
+          <h3 class="text-xl font-bold text-dark-300 mb-4">
+            {service.title}
+          </h3>
+          
+          <p class="text-dark-100 mb-6">
+            {service.description}
+          </p>
+          
+          <ul class="space-y-2 mb-6">
+            {service.features.map(feature => (
+              <li class="flex items-center text-sm text-dark-200">
+                <svg class="w-4 h-4 text-primary-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                {feature}
+              </li>
+            ))}
+          </ul>
+          
+          <a 
+            href="/contacto" 
+            class="inline-flex items-center text-primary-600 font-semibold hover:text-primary-700 transition-colors group-hover:translate-x-1"
+          >
+            Más información
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="/servicios" class="btn-primary">
+        Ver todos los servicios
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Services from '../components/Services.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Instalema - Servicios Profesionales de Instalaciones y Mantenimiento";
+const description = "Empresa líder en instalaciones eléctricas, fontanería, gas, climatización y mantenimiento técnico. Más de 15 años de experiencia. Presupuesto gratuito.";
+---
+
+<Layout title={title} description={description}>
+  <Header />
+  <main>
+    <Hero />
+    <Services />
+    <Contact />
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  main {
+    padding-top: 0;
+  }
+</style>
