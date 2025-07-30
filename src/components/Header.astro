@@ -1,25 +1,30 @@
 ---
-import { Icon } from 'astro-icon/components';
+// import { Icon } from 'astro-icon/components';
 ---
 
-<header class="fixed top-0 w-full z-50 glass transition-all duration-300" id="header">
+<header class="fixed top-0 w-full z-50 transition-all duration-300" id="header">
   <nav class="container-max">
-    <div class="flex items-center justify-between h-16 md:h-20">
+    <div class="bg-black/[var(--bg-opacity)] [--bg-opacity:10%] grid items-center justify-center grid-cols-[auto_1fr] m-auto gap-x-10 md:flex max-w-screen-full py-4 backdrop-blur-xs overflow-visible z-[99999] header-animate">
       <!-- Logo -->
       <div class="flex-shrink-0">
         <a href="/" class="flex items-center space-x-2 group" aria-label="Instalema - Inicio">
-          <div class="w-10 h-10 bg-primary-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-            <span class="text-dark-400 font-bold text-xl">I</span>
-          </div>
-          <span class="text-xl font-bold text-dark-300 group-hover:text-primary-500 transition-colors">
-            Instalema
-          </span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="160" viewBox="0 0 225 24" fill="none">
+          <path d="M0.100098 0.500019H6.3101V23H0.100098V0.500019Z" fill="white"/>
+          <path d="M31.3505 18.65L29.4305 19.04V0.500019H35.4605V23H27.6305L14.6405 4.49002L16.5305 4.10002V23H10.5005V0.500019H18.5405L31.3505 18.65Z" fill="white"/>
+          <path d="M38.6309 15.62H44.9609C45.0609 16.24 45.3509 16.78 45.8309 17.24C46.3109 17.7 46.9509 18.06 47.7509 18.32C48.5709 18.56 49.5309 18.68 50.6309 18.68C52.1509 18.68 53.3509 18.49 54.2309 18.11C55.1109 17.71 55.5509 17.13 55.5509 16.37C55.5509 15.79 55.3009 15.34 54.8009 15.02C54.3009 14.7 53.3409 14.47 51.9209 14.33L47.7209 13.94C44.6209 13.66 42.3709 12.96 40.9709 11.84C39.5709 10.7 38.8709 9.17002 38.8709 7.25002C38.8709 5.69002 39.3209 4.37002 40.2209 3.29002C41.1409 2.21002 42.4209 1.40002 44.0609 0.860019C45.7209 0.30002 47.6509 0.0200195 49.8509 0.0200195C52.0109 0.0200195 53.9309 0.33002 55.6109 0.95002C57.2909 1.55002 58.6209 2.41002 59.6009 3.53002C60.6009 4.65002 61.1409 5.95002 61.2209 7.43002H54.9209C54.8409 6.89002 54.5809 6.43002 54.1409 6.05002C53.7209 5.65002 53.1409 5.35002 52.4009 5.15002C51.6609 4.93002 50.7709 4.82002 49.7309 4.82002C48.3309 4.82002 47.2209 5.01002 46.4009 5.39002C45.5809 5.75002 45.1709 6.29002 45.1709 7.01002C45.1709 7.53002 45.4109 7.95002 45.8909 8.27002C46.3909 8.59002 47.2809 8.81002 48.5609 8.93002L53.0309 9.38002C55.1709 9.58002 56.8809 9.93002 58.1609 10.43C59.4409 10.91 60.3709 11.58 60.9509 12.44C61.5309 13.3 61.8209 14.37 61.8209 15.65C61.8209 17.23 61.3509 18.61 60.4109 19.79C59.4709 20.95 58.1509 21.86 56.4509 22.52C54.7509 23.16 52.7709 23.48 50.5109 23.48C48.1909 23.48 46.1409 23.16 44.3609 22.52C42.6009 21.86 41.2209 20.94 40.2209 19.76C39.2209 18.56 38.6909 17.18 38.6309 15.62Z" fill="white"/>
+          <path d="M71.1931 3.23002H77.4331V23H71.1931V3.23002ZM62.6131 0.500019H86.0131V6.02002H62.6131V0.500019Z" fill="white"/>
+          <path d="M89.4703 18.68V13.67H104.98V18.68H89.4703ZM101.44 0.500019L111.67 23H105.04L96.4603 3.14002H98.2603L89.6503 23H83.0203L93.2503 0.500019H101.44Z" fill="white"/>
+          <path d="M120.011 0.500019V20.24L117.221 17.48H134.051V23H113.801V0.500019H120.011Z" fill="white"/>
+          <path d="M155.941 9.50002V14H139.471V9.50002H155.941ZM143.701 11.75L142.231 20.78L139.711 17.96H156.931V23H136.021L137.731 11.75L136.021 0.500019H156.781V5.54002H139.711L142.231 2.72002L143.701 11.75Z" fill="white"/>
+          <path d="M193.41 0.500019V23H187.5V2.72002L188.82 2.87002L180.12 23H173.82L165.09 2.93002L166.44 2.78002V23H160.53V0.500019H170.13L178.2 19.82H175.8L183.81 0.500019H193.41Z" fill="white"/>
+          <path d="M202 18.68V13.67H217.51V18.68H202ZM213.97 0.500019L224.2 23H217.57L208.99 3.14002H210.79L202.18 23H195.55L205.78 0.500019H213.97Z" fill="white"/>
+          </svg>
         </a>
       </div>
 
       <!-- Desktop Navigation -->
       <div class="hidden md:block">
-        <div class="ml-10 flex items-baseline space-x-8">
+        <div class="ml-10 flex items-baseline space-x-8 text-white">
           <a href="/" class="nav-link" aria-label="Inicio">Inicio</a>
           <a href="/servicios" class="nav-link" aria-label="Servicios">Servicios</a>
           <a href="/sobre-nosotros" class="nav-link" aria-label="Sobre nosotros">Sobre nosotros</a>
@@ -37,11 +42,7 @@ import { Icon } from 'astro-icon/components';
 
       <!-- Mobile menu button -->
       <div class="md:hidden">
-        <button 
-          type="button" 
-          class="mobile-menu-button text-dark-300 hover:text-primary-500 transition-colors"
-          aria-label="Abrir menú de navegación"
-        >
+        <button type="button" class="mobile-menu-button text-dark-300 hover:text-primary-500 transition-colors"aria-label="Abrir menú de navegación">
           <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
@@ -69,7 +70,7 @@ import { Icon } from 'astro-icon/components';
 
 <style>
   .nav-link {
-    @apply text-dark-300 hover:text-primary-500 px-3 py-2 text-sm font-medium transition-colors relative;
+    @apply text-white hover:text-primary-500 px-1 py-2 text-sm font-medium transition-colors relative;
   }
   
   .nav-link::after {
