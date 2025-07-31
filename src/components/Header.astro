@@ -3,42 +3,44 @@
 ---
 
 <header class="fixed top-0 w-full z-50 transition-all duration-300" id="header">
-  <nav class="container-max">
-    <div class="bg-black/[var(--bg-opacity)] [--bg-opacity:10%] grid items-center justify-center grid-cols-[auto_1fr] m-auto gap-x-10 md:flex max-w-screen-full py-4 backdrop-blur-xs overflow-visible z-[99999] header-animate backdrop-blur-md border-b border-white/15">
-      <!-- Logo -->
-      <div class="flex-shrink-0">
-        <a href="/" class="flex items-center space-x-2 group" aria-label="Instalema - Inicio">
-          <svg xmlns="http://www.w3.org/2000/svg" width="160" viewBox="0 0 225 24" fill="none">
-            <path d="M49.751 0C51.9108 1.86133e-05 53.8308 0.30974 55.5107 0.929688C57.1907 1.52968 58.521 2.38978 59.501 3.50977C60.501 4.62977 61.0411 5.93016 61.1211 7.41016H54.8203C54.7403 6.87027 54.4809 6.41023 54.041 6.03027C53.621 5.63027 53.0408 5.32988 52.3008 5.12988C51.5608 4.90989 50.6708 4.79981 49.6309 4.7998C48.2309 4.7998 47.1208 4.99012 46.3008 5.37012C45.4808 5.73012 45.0703 6.27025 45.0703 6.99023C45.0704 7.51013 45.3111 7.93005 45.791 8.25C46.291 8.56994 47.1811 8.79017 48.4609 8.91016L52.9307 9.36035C55.0706 9.56034 56.7806 9.91019 58.0605 10.4102C59.3405 10.8901 60.2706 11.56 60.8506 12.4199C61.4306 13.2799 61.7207 14.3499 61.7207 15.6299C61.7207 17.2098 61.2505 18.5896 60.3105 19.7695C59.3705 20.9295 58.0506 21.84 56.3506 22.5C54.6507 23.1399 52.6709 23.4599 50.4111 23.46C48.0911 23.46 46.0407 23.14 44.2607 22.5C42.5009 21.8401 41.1211 20.9201 40.1211 19.7402C39.1211 18.5402 38.5912 17.1596 38.5312 15.5996H44.8604C44.9603 16.2195 45.2506 16.7598 45.7305 17.2197C46.2104 17.6796 46.8506 18.0398 47.6504 18.2998C48.4704 18.5398 49.4312 18.6602 50.5312 18.6602C52.051 18.6601 53.2509 18.4698 54.1309 18.0898C55.0108 17.6898 55.4512 17.1096 55.4512 16.3496C55.4511 15.7699 55.2009 15.3199 54.7012 15C54.2012 14.68 53.2403 14.4496 51.8203 14.3096L47.6211 13.9199C44.5213 13.6399 42.2711 12.9402 40.8711 11.8203C39.4712 10.6804 38.7706 9.15025 38.7705 7.23047C38.7705 5.67047 39.2211 4.34953 40.1211 3.26953C41.0411 2.18974 42.3212 1.37977 43.9609 0.839844C45.6209 0.279886 47.5511 0 49.751 0ZM6.20996 22.9805H0V0.480469H6.20996V22.9805ZM29.3301 15.9092V0.480469H35.3604V22.9805H27.5303L16.4307 7.16309V22.9805H10.4004V0.480469H18.4404L29.3301 15.9092ZM85.9131 6H77.333V22.9805H71.0928V6H62.5127V0.480469H85.9131V6ZM111.57 22.9805H104.94L103.074 18.6602H91.4229L89.5498 22.9805H82.9199L93.1504 0.480469H101.34L111.57 22.9805ZM119.911 17.46H133.951V22.9805H113.701V0.480469H119.911V17.46ZM156.682 5.51953H142.59L143.235 9.48047H155.842V13.9805H143.235L142.59 17.9404H156.831V22.9805H135.921L137.631 11.7305L135.921 0.480469H156.682V5.51953ZM176.895 16.916L183.71 0.480469H193.31V22.9805H187.399V5.9043L180.02 22.9805H173.72L166.34 6.01465V22.9805H160.43V0.480469H170.029L176.895 16.916ZM224.1 22.9805H217.47L215.604 18.6602H203.952L202.079 22.9805H195.449L205.68 0.480469H213.869L224.1 22.9805ZM206.124 13.6504H213.438L209.787 5.19922L206.124 13.6504ZM93.5947 13.6504H100.909L97.2578 5.19922L93.5947 13.6504Z" fill="white"/>
-          </svg>
-        </a>
-      </div>
-
-      <!-- Desktop Navigation -->
-      <div class="hidden md:block">
-        <div class="ml-10 flex items-baseline space-x-8 text-white">
-          <a href="/" class="nav-link" aria-label="Inicio">Inicio</a>
-          <a href="/servicios" class="nav-link" aria-label="Servicios">Servicios</a>
-          <a href="/sobre-nosotros" class="nav-link" aria-label="Sobre nosotros">Sobre nosotros</a>
-          <a href="/ubicacion" class="nav-link" aria-label="Ubicación">Ubicación</a>
-          <a href="/contacto" class="nav-link" aria-label="Contacto">Contacto</a>
+  <nav class="fixed container-max w-full m-0">
+    <div class="fixed backdrop-blur-xs bg-black/[var(--bg-opacity)] [--bg-opacity:10%] backdrop-blur-md border-b border-white/15 overflow-visible z-[99999] header-animate w-full">
+      <div class="section-padding container-max grid items-center justify-center content-between grid-cols-[auto_1fr] m-auto gap-x-10 md:flex w-full py-4">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <a href="/" class="flex items-center space-x-2 group" aria-label="Instalema - Inicio">
+            <svg xmlns="http://www.w3.org/2000/svg" width="160" viewBox="0 0 225 24" fill="none">
+              <path d="M49.751 0C51.9108 1.86133e-05 53.8308 0.30974 55.5107 0.929688C57.1907 1.52968 58.521 2.38978 59.501 3.50977C60.501 4.62977 61.0411 5.93016 61.1211 7.41016H54.8203C54.7403 6.87027 54.4809 6.41023 54.041 6.03027C53.621 5.63027 53.0408 5.32988 52.3008 5.12988C51.5608 4.90989 50.6708 4.79981 49.6309 4.7998C48.2309 4.7998 47.1208 4.99012 46.3008 5.37012C45.4808 5.73012 45.0703 6.27025 45.0703 6.99023C45.0704 7.51013 45.3111 7.93005 45.791 8.25C46.291 8.56994 47.1811 8.79017 48.4609 8.91016L52.9307 9.36035C55.0706 9.56034 56.7806 9.91019 58.0605 10.4102C59.3405 10.8901 60.2706 11.56 60.8506 12.4199C61.4306 13.2799 61.7207 14.3499 61.7207 15.6299C61.7207 17.2098 61.2505 18.5896 60.3105 19.7695C59.3705 20.9295 58.0506 21.84 56.3506 22.5C54.6507 23.1399 52.6709 23.4599 50.4111 23.46C48.0911 23.46 46.0407 23.14 44.2607 22.5C42.5009 21.8401 41.1211 20.9201 40.1211 19.7402C39.1211 18.5402 38.5912 17.1596 38.5312 15.5996H44.8604C44.9603 16.2195 45.2506 16.7598 45.7305 17.2197C46.2104 17.6796 46.8506 18.0398 47.6504 18.2998C48.4704 18.5398 49.4312 18.6602 50.5312 18.6602C52.051 18.6601 53.2509 18.4698 54.1309 18.0898C55.0108 17.6898 55.4512 17.1096 55.4512 16.3496C55.4511 15.7699 55.2009 15.3199 54.7012 15C54.2012 14.68 53.2403 14.4496 51.8203 14.3096L47.6211 13.9199C44.5213 13.6399 42.2711 12.9402 40.8711 11.8203C39.4712 10.6804 38.7706 9.15025 38.7705 7.23047C38.7705 5.67047 39.2211 4.34953 40.1211 3.26953C41.0411 2.18974 42.3212 1.37977 43.9609 0.839844C45.6209 0.279886 47.5511 0 49.751 0ZM6.20996 22.9805H0V0.480469H6.20996V22.9805ZM29.3301 15.9092V0.480469H35.3604V22.9805H27.5303L16.4307 7.16309V22.9805H10.4004V0.480469H18.4404L29.3301 15.9092ZM85.9131 6H77.333V22.9805H71.0928V6H62.5127V0.480469H85.9131V6ZM111.57 22.9805H104.94L103.074 18.6602H91.4229L89.5498 22.9805H82.9199L93.1504 0.480469H101.34L111.57 22.9805ZM119.911 17.46H133.951V22.9805H113.701V0.480469H119.911V17.46ZM156.682 5.51953H142.59L143.235 9.48047H155.842V13.9805H143.235L142.59 17.9404H156.831V22.9805H135.921L137.631 11.7305L135.921 0.480469H156.682V5.51953ZM176.895 16.916L183.71 0.480469H193.31V22.9805H187.399V5.9043L180.02 22.9805H173.72L166.34 6.01465V22.9805H160.43V0.480469H170.029L176.895 16.916ZM224.1 22.9805H217.47L215.604 18.6602H203.952L202.079 22.9805H195.449L205.68 0.480469H213.869L224.1 22.9805ZM206.124 13.6504H213.438L209.787 5.19922L206.124 13.6504ZM93.5947 13.6504H100.909L97.2578 5.19922L93.5947 13.6504Z" fill="white"/>
+            </svg>
+          </a>
         </div>
-      </div>
 
-      <!-- CTA Button -->
-      <div class="hidden md:block">
-        <a href="tel:+34123456789" class="btn-primary">
-          Llamar ahora
-        </a>
-      </div>
+        <!-- Desktop Navigation -->
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-8 text-white">
+            <a href="/" class="nav-link" aria-label="Inicio">Inicio</a>
+            <a href="/servicios" class="nav-link" aria-label="Servicios">Servicios</a>
+            <a href="/sobre-nosotros" class="nav-link" aria-label="Sobre nosotros">Sobre nosotros</a>
+            <a href="/ubicacion" class="nav-link" aria-label="Ubicación">Ubicación</a>
+            <a href="/contacto" class="nav-link" aria-label="Contacto">Contacto</a>
+          </div>
+        </div>
 
-      <!-- Mobile menu button -->
-      <div class="md:hidden">
-        <button type="button" class="mobile-menu-button text-dark-300 hover:text-primary-500 transition-colors"aria-label="Abrir menú de navegación">
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
+        <!-- CTA Button -->
+        <div class="hidden md:block">
+          <a href="tel:+34123456789" class="btn-primary">
+            Llamar ahora
+          </a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button type="button" class="mobile-menu-button text-dark-300 hover:text-primary-500 transition-colors"aria-label="Abrir menú de navegación">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
 
