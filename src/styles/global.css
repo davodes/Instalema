@@ -31,10 +31,10 @@
   }
 
   /* Focus styles for accessibility */
-  *:focus {
+  /* *:focus {
     outline: 2px solid theme('colors.primary.500');
     outline-offset: 2px;
-  }
+  } */
 
   /* Reduce motion for users who prefer it */
   @media (prefers-reduced-motion: reduce) {
@@ -48,7 +48,7 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-primary-500 hover:bg-primary-600 text-dark-400 font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 focus:ring-4 focus:ring-primary-500/50;
+    @apply bg-primary-500 text-dark-400 font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 focus:ring-4 focus:ring-primary-500/50;
   }
   
   .btn-secondary {
