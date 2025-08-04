@@ -40,37 +40,43 @@ const services = [
 ---
 
 <section class="section-padding bg-dark-300" id="servicios">
+
+  <div class="absolute w-fill-available min-h-screen">
+    <div class="absolute top-5 left-20 w-56 h-56 bg-primary-500/10 rounded-full blur-3xl animate-float"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl animate-float" style="animation-delay: -1.5s;"></div>
+  </div>
+
   <div class="container-max">
     <div class="text-center mb-16">
       <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
         Nuestros Servicios
       </h2>
       <p class="text-xl text-dark-100 max-w-2xl mx-auto">
-        Ofrecemos soluciones técnicas integrales con la máxima calidad y profesionalidad
+        Ofrecemos soluciones técnicas integrales con la máxima calidad.
       </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {services.map((service, index) => (
         <div 
-          class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-2"
+          class="pricing-card group rounded-2xl p-10 border relative flex flex-col justify-between h-full transition-all duration-300 hover:-translate-y-1 bg-[#2a2a2a33] border-[#ffffff0a] hover:border-primary-500 shadow-[0_0_0_1px_#5dff0008] hover:shadow-[0_0_30px_-5px_rgba(90,225,0,13%)] hover:cursor-pointer"
           style={`animation-delay: ${index * 0.1}s`}
         >
           <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">
             {service.icon}
           </div>
           
-          <h3 class="text-xl font-bold text-dark-300 mb-4">
+          <h3 class="text-xl font-bold text-white mb-4">
             {service.title}
           </h3>
           
-          <p class="text-dark-100 mb-6">
+          <p class="text-neutral-300 mb-6">
             {service.description}
           </p>
           
           <ul class="space-y-2 mb-6">
             {service.features.map(feature => (
-              <li class="flex items-center text-sm text-dark-200">
+              <li class="flex items-center text-sm text-neutral-300">
                 <svg class="w-4 h-4 text-primary-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                 </svg>
@@ -99,3 +105,9 @@ const services = [
     </div>
   </div>
 </section>
+
+<style>
+  .section-padding {
+    padding-top: 2.5rem;
+  }
+</style>
