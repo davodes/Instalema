@@ -1,38 +1,39 @@
 ---
+
 const services = [
   {
-    icon: '⚡',
-    title: 'Instalaciones Eléctricas',
+    icon: '/icons/InstalacionesElectricas.svg',
+    title: 'Instalaciones eléctricas',
     description: 'Instalación y reparación de sistemas eléctricos residenciales y comerciales con total garantía.',
     features: ['Cuadros eléctricos', 'Iluminación LED', 'Domótica', 'Certificaciones']
   },
   {
-    icon: '🔧',
-    title: 'Mantenimiento Técnico',
+    icon: '/icons/MantenimientoTecnico.svg',
+    title: 'Mantenimiento técnico',
     description: 'Mantenimiento preventivo y correctivo de equipos e instalaciones industriales.',
     features: ['Mantenimiento preventivo', 'Reparaciones urgentes', 'Inspecciones técnicas', 'Informes detallados']
   },
   {
-    icon: '🚿',
+    icon: '/icons/Fontaneria.svg',
     title: 'Fontanería',
     description: 'Servicios completos de fontanería, desde reparaciones hasta instalaciones nuevas.',
     features: ['Reparación tuberías', 'Instalación sanitarios', 'Detección fugas', 'Urgencias 24h']
   },
   {
-    icon: '🔥',
-    title: 'Instalaciones de Gas',
+    icon: '/icons/Gas.svg',
+    title: 'Instalaciones de gas',
     description: 'Instalación y mantenimiento de sistemas de gas con certificación oficial.',
     features: ['Gas natural', 'Gas butano/propano', 'Certificaciones', 'Revisiones anuales']
   },
   {
-    icon: '❄️',
+    icon: '/icons/Climatizacion.svg',
     title: 'Climatización',
     description: 'Sistemas de calefacción y refrigeración eficientes para tu comodidad.',
     features: ['Aire acondicionado', 'Calefacción', 'Aerotermia', 'Eficiencia energética']
   },
   {
-    icon: '🏠',
-    title: 'Reformas Integrales',
+    icon: '/icons/ReformasIntegrales.svg',
+    title: 'Reformas integrales',
     description: 'Renovación completa de espacios con coordinación de todos los gremios.',
     features: ['Diseño personalizado', 'Coordinación obras', 'Licencias', 'Llave en mano']
   }
@@ -63,7 +64,9 @@ const services = [
           style={`animation-delay: ${index * 0.1}s`}
         >
           <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">
-            {service.icon}
+            {typeof service.icon === 'string'
+              ? <img src={service.icon} alt="" width="35" />
+              : service.icon}
           </div>
           
           <h3 class="text-xl font-bold text-white mb-4">
@@ -94,6 +97,7 @@ const services = [
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
             </svg>
           </a>
+          <a href="/contacto" class="absolute inset-0 z-10"></a> 
         </div>
       ))}
     </div>
