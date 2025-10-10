@@ -100,6 +100,28 @@
       transition-duration: 0.01ms !important;
     }
   }
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-dark-300;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary-400;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary-500;
+  }
+
+  /* Firefox scrollbar */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: theme('colors.primary.400') theme('colors.dark.300');
+  }
 }
 
 @layer components {
