@@ -5,37 +5,43 @@ const services = [
     icon: '/icons/InstalacionesElectricas.svg',
     title: 'Instalaciones eléctricas',
     description: 'Instalación y reparación de sistemas eléctricos residenciales y comerciales con total garantía.',
-    features: ['Cuadros eléctricos', 'Iluminación LED', 'Domótica', 'Certificaciones']
+    features: ['Cuadros eléctricos', 'Iluminación LED', 'Domótica', 'Certificaciones'],
+    button: 'Ver instalaciones eléctricas'
   },
   {
     icon: '/icons/MantenimientoTecnico.svg',
     title: 'Mantenimiento técnico',
     description: 'Mantenimiento preventivo y correctivo de equipos e instalaciones industriales.',
-    features: ['Mantenimiento preventivo', 'Reparaciones urgentes', 'Inspecciones técnicas', 'Informes detallados']
+    features: ['Mantenimiento preventivo', 'Reparaciones urgentes', 'Inspecciones técnicas', 'Informes detallados'],
+    button: 'Ver mantenimiento técnico'
   },
   {
     icon: '/icons/Fontaneria.svg',
     title: 'Fontanería',
     description: 'Servicios completos de fontanería, desde reparaciones hasta instalaciones nuevas.',
-    features: ['Reparación tuberías', 'Instalación sanitarios', 'Detección fugas', 'Urgencias 24h']
+    features: ['Reparación tuberías', 'Instalación sanitarios', 'Detección fugas', 'Urgencias 24h'],
+    button: 'Ver sobre fontanería'
   },
   {
     icon: '/icons/Gas.svg',
     title: 'Instalaciones de gas',
     description: 'Instalación y mantenimiento de sistemas de gas con certificación oficial.',
-    features: ['Gas natural', 'Gas butano/propano', 'Certificaciones', 'Revisiones anuales']
+    features: ['Gas natural', 'Gas butano/propano', 'Certificaciones', 'Revisiones anuales'],
+    button: 'Ver sobre instalaciones de gas'
   },
   {
     icon: '/icons/Climatizacion.svg',
     title: 'Climatización',
     description: 'Sistemas de calefacción y refrigeración eficientes para tu comodidad.',
-    features: ['Aire acondicionado', 'Calefacción', 'Aerotermia', 'Eficiencia energética']
+    features: ['Aire acondicionado', 'Calefacción', 'Aerotermia', 'Eficiencia energética'],
+    button: 'Ver sobre climatizacion'
   },
   {
     icon: '/icons/ReformasIntegrales.svg',
     title: 'Reformas integrales',
     description: 'Renovación completa de espacios con coordinación de todos los gremios.',
-    features: ['Diseño personalizado', 'Coordinación obras', 'Licencias', 'Llave en mano']
+    features: ['Diseño personalizado', 'Coordinación obras', 'Licencias', 'Llave en mano'],
+    button: 'Ver sobre reformas integrales'
   }
 ];
 ---
@@ -92,7 +98,7 @@ const services = [
             href="/contacto" 
             class="inline-flex items-center text-primary-500 font-semibold hover:text-primary-700 transition-colors group-hover:translate-x-1"
           >
-            Más información
+            {service.button}
             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
             </svg>
