@@ -9,8 +9,8 @@ const description = "Servicios completos de instalaciones eléctricas, fontaner�
 const services = [
   {
     id: 'electricidad',
-    icon: '⚡',
-    title: 'Instalaciones Eléctricas',
+    icon: '/icons/InstalacionesElectricas.svg',
+    title: 'Instalaciones eléctricas',
     description: 'Servicios completos de electricidad residencial, comercial e industrial con certificación oficial.',
     features: [
       'Instalación de cuadros eléctricos',
@@ -23,8 +23,23 @@ const services = [
     image: 'https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=800'
   },
   {
+    id: 'mantenimiento',
+    icon: '/icons/MantenimientoTecnico.svg',
+    title: 'Mantenimiento técnico',
+    description: 'Mantenimiento preventivo y correctivo de equipos e instalaciones industriales.',
+    features: [
+      'Mantenimiento preventivo planificado',
+      'Reparaciones de urgencia',
+      'Inspecciones técnicas reglamentarias',
+      'Informes detallados de estado',
+      'Optimización de equipos',
+      'Contratos de mantenimiento'
+    ],
+    image: 'https://images.pexels.com/photos/2898199/pexels-photo-2898199.jpeg?auto=compress&cs=tinysrgb&w=800'
+  },
+  {
     id: 'fontaneria',
-    icon: '🚿',
+    icon: '/icons/Fontaneria.svg',
     title: 'Fontanería',
     description: 'Soluciones integrales en fontanería, desde reparaciones urgentes hasta instalaciones completas.',
     features: [
@@ -35,12 +50,12 @@ const services = [
       'Mantenimiento preventivo',
       'Servicio de urgencias 24h'
     ],
-    image: 'https://images.pexels.com/photos/8486944/pexels-photo-8486944.jpeg?auto=compress&cs=tinysrgb&w=800'
+    image: 'https://images.pexels.com/photos/6419128/pexels-photo-6419128.jpeg?auto=compress&cs=tinysrgb&w=800'
   },
   {
     id: 'gas',
-    icon: '🔥',
-    title: 'Instalaciones de Gas',
+    icon: '/icons/Gas.svg',
+    title: 'Instalaciones de gas',
     description: 'Instalación y mantenimiento de sistemas de gas natural y GLP con total seguridad.',
     features: [
       'Instalaciones de gas natural',
@@ -50,11 +65,11 @@ const services = [
       'Reparación de averías',
       'Conversión de instalaciones'
     ],
-    image: 'https://images.pexels.com/photos/4250268/pexels-photo-4250268.jpeg?auto=compress&cs=tinysrgb&w=800'
+    image: 'https://images.pexels.com/photos/11262209/pexels-photo-11262209.jpeg?auto=compress&cs=tinysrgb&w=800'
   },
   {
     id: 'climatizacion',
-    icon: '❄️',
+    icon: '/icons/Climatizacion.svg',
     title: 'Climatización',
     description: 'Sistemas de calefacción y refrigeración eficientes para máximo confort.',
     features: [
@@ -65,27 +80,12 @@ const services = [
       'Mantenimiento de equipos',
       'Mejoras de eficiencia energética'
     ],
-    image: 'https://images.pexels.com/photos/5425259/pexels-photo-5425259.jpeg?auto=compress&cs=tinysrgb&w=800'
-  },
-  {
-    id: 'mantenimiento',
-    icon: '🔧',
-    title: 'Mantenimiento Técnico',
-    description: 'Mantenimiento preventivo y correctivo de equipos e instalaciones industriales.',
-    features: [
-      'Mantenimiento preventivo planificado',
-      'Reparaciones de urgencia',
-      'Inspecciones técnicas reglamentarias',
-      'Informes detallados de estado',
-      'Optimización de equipos',
-      'Contratos de mantenimiento'
-    ],
-    image: 'https://images.pexels.com/photos/5691630/pexels-photo-5691630.jpeg?auto=compress&cs=tinysrgb&w=800'
+    image: 'https://images.pexels.com/photos/3864594/pexels-photo-3864594.jpeg?auto=compress&cs=tinysrgb&w=800'
   },
   {
     id: 'reformas',
-    icon: '🏠',
-    title: 'Reformas Integrales',
+    icon: '/icons/ReformasIntegrales.svg',
+    title: 'Reformas integrales',
     description: 'Renovación completa de espacios con coordinación de todos los gremios necesarios.',
     features: [
       'Diseño personalizado de espacios',
@@ -95,7 +95,7 @@ const services = [
       'Seguimiento de obra',
       'Garantía integral del proyecto'
     ],
-    image: 'https://images.pexels.com/photos/8293726/pexels-photo-8293726.jpeg?auto=compress&cs=tinysrgb&w=800'
+    image: 'https://images.pexels.com/photos/834892/pexels-photo-834892.jpeg?auto=compress&cs=tinysrgb&w=800'
   }
 ];
 ---
@@ -105,20 +105,20 @@ const services = [
   
   <main>
     <!-- Hero Section -->
-    <section class="section-padding bg-gradient-to-br from-dark-300 to-dark-300 text-white">
+    <section class="section-padding pb-10 bg-gradient-to-br from-dark-300 to-dark-300 text-white">
       <div class="mt-20 mb-5 container-max text-center">
         <h1 class="text-4xl md:text-5xl font-bold mb-6">
-          Nuestros Servicios
+          Nuestros servicios
         </h1>
         <p class="text-xl text-gray-300 max-w-3xl mx-auto">
           Ofrecemos soluciones técnicas completas con la máxima calidad y profesionalidad. 
-          Más de 15 años de experiencia nos avalan.
+          Más de 30 años de experiencia nos avalan.
         </p>
       </div>
     </section>
 
     <!-- Services Detail -->
-    <section class="section-padding">
+    <section class="section-padding pt-10">
       <div class="container-max">
         <div class="space-y-24">
           {services.map((service, index) => (
@@ -128,28 +128,35 @@ const services = [
                 index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
               }`}
             >
-              <div class={index % 2 === 1 ? 'lg:col-start-2' : ''}>
-                <div class="text-6xl mb-6">{service.icon}</div>
-                <h2 class="text-3xl font-bold text-dark-300 mb-4">
-                  {service.title}
-                </h2>
-                <p class="text-lg text-dark-100 mb-8">
+              <div class={`flex flex-col gap-4 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+                <div class="flex items-center gap-2">
+                  <div class="text-6xl">
+                    {typeof service.icon === 'string'
+                      ? <img src={service.icon} alt={service.title} height="10" width="20" />
+                      : service.icon}
+                  </div>
+                  <h2 class="text-2xl font-bold bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent mb-0">
+                    {service.title}
+                  </h2>
+                </div>
+
+                <p class="text-lg text-white/90 mb-2">
                   {service.description}
                 </p>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {service.features.map(feature => (
                     <div class="flex items-center space-x-3">
                       <svg class="w-5 h-5 text-primary-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                       </svg>
-                      <span class="text-dark-200">{feature}</span>
+                      <span class="text-white/75">{feature}</span>
                     </div>
                   ))}
                 </div>
                 
-                <a href="/contacto" class="btn-primary">
-                  Solicitar presupuesto
+                <a href="/contacto" class="btn-primary text-base px-8 py-4 group flex justify-center gap-2 items-center w-fit mt-4">
+                  Solicita presupuesto<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 23 23" fill="none"><path d="M9.71154 6.88462L14.3269 11.5L9.71154 16.1154M21.25 11.5C21.25 17.0228 16.7728 21.5 11.25 21.5C5.72715 21.5 1.25 17.0228 1.25 11.5C1.25 5.97715 5.72715 1.5 11.25 1.5C16.7728 1.5 21.25 5.97715 21.25 11.5Z" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
               </div>
               
@@ -167,8 +174,8 @@ const services = [
       </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="section-padding bg-primary-500">
+    // <!-- CTA Section -->
+    <section class="section-padding bg-primary-400">
       <div class="container-max text-center">
         <h2 class="text-3xl md:text-4xl font-bold text-dark-400 mb-6">
           ¿Necesitas alguno de nuestros servicios?
